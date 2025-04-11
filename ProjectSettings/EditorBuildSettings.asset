@@ -5,7 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Overlay.unity
+    guid: 821e6a0b762419545bb29257e9293979
+  - enabled: 1
+    path: Assets/Scenes/VehicleScene.unity
+    guid: dd3503a2799d81240a42a063bdbb7cba
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
