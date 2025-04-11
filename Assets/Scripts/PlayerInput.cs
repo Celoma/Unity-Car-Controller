@@ -9,7 +9,7 @@ public class PlayerInput : MonoBehaviour
 {
     private PlayerControls _playerControls;
     private CarController _carController;
-
+    public Timerscript timerscript;
     public float accel;
     public float handBrake;
     public float turn;
