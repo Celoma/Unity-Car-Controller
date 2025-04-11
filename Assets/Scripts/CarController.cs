@@ -30,36 +30,22 @@ public class CarController : MonoBehaviour
     [SerializeField] private MeshRenderer _reverseLightMeshRenderer;
 
     [Header("Car Settings"), Space(7)]
-    [Tooltip("The amount of offset to apply to the rigidbody center of mass.")]
     [SerializeField] private Vector3 _centerOfMassOffset;
-    [Tooltip("How far the wheels can turn."), Range(20f, 35f)]
     [SerializeField] private float _maximumSteerAngle;
-    [Tooltip("How much torque to add to the drive wheels when moving forward.")]
     [SerializeField] private float _fullTorqueOverAllWheels;
-    [Tooltip("How much torque to add to the drive wheels in reverse.")]
     [SerializeField] private float _reverseTorque;
-    [Tooltip("How much force should be used for the handbrake.")]
     [SerializeField] private float _maxHandbrakeTorque;
-    [Tooltip("Will limit how fast the car can go.")]
     [SerializeField] private float _topSpeed = 200.0f;
-    [Tooltip("The limit of the rev range.")]
     [SerializeField] private float _revRangeBoundary = 1f;
-    [Tooltip("How much slip until wheel effects start playing."), Range(0.1f, 1f)]
     [SerializeField] private float _slipLimit;
-    [Tooltip("How much force will be used to apply the brakes")]
     [SerializeField] private float _brakeTorque;
-    [Tooltip("How quickly digital input reaches the max value.")]
     [SerializeField] private float _smoothInputSpeed = 0.2f;
     private static int NumberOfGears = 5;
 
     [Header("Steering Helpers"), Space(7)]
-    [Tooltip("How much force will be applied to the wheels to prevent flipping. (A good value is around the spring value of the wheel collider.")]
     [SerializeField] private float _antiRollVal = 3500.0f;
-    [Tooltip("How much down force to add to the car.")]
     [SerializeField] private float _downForce = 100.0f;
-    [Tooltip("0 is pure physics, 1 the car will grip in the direction it's facing.")]
     [SerializeField, Range(0, 1)] private float _steerHelper;
-    [Tooltip("0 is no traction control, 1 will try and prevent any slipping")]
     [SerializeField, Range(0, 1)] private float _tractionControl;
 
 

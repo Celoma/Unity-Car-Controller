@@ -1194,6 +1194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2700240732394858701, guid: 9c1ac83813e02ab45b16ca28fa1c19d9, type: 3}
+      propertyPath: _speedType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2700240732394858706, guid: 9c1ac83813e02ab45b16ca28fa1c19d9, type: 3}
       propertyPath: m_Name
       value: SportCar20
@@ -1211,6 +1215,71 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8087672166386337539, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_Text
+      value: "Keyboard:\nZ/S - Avancer / Reculer\nA/D - Gauche - Droite\nEspace -
+        Frein \xE0 main\nSouris: Cam\xE9ra libre"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337539, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.60281605
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.16081828
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 435.9176
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 129.81296
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 231.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166386337540, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.093523
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166471921678, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166471921678, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166471921678, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166471921679, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166471921679, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672166471921679, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8087672166994076889, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
       propertyPath: _carController
       value: 
@@ -1302,6 +1371,34 @@ PrefabInstance:
     - target: {fileID: 8087672166994076894, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672167604676969, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672167604676969, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672167604676969, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.176651
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672167604676970, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672167604676970, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672167604676970, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087672167604676970, guid: c6f1bc070b168ed40a16017f50868ec3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1402,19 +1499,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8561954619123499385, guid: 9719073aed5bdac4dbe0eb7d0ec04aae, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.93331945
       objectReference: {fileID: 0}
     - target: {fileID: 8561954619123499385, guid: 9719073aed5bdac4dbe0eb7d0ec04aae, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.08787928
       objectReference: {fileID: 0}
     - target: {fileID: 8561954619123499385, guid: 9719073aed5bdac4dbe0eb7d0ec04aae, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.34659353
       objectReference: {fileID: 0}
     - target: {fileID: 8561954619123499385, guid: 9719073aed5bdac4dbe0eb7d0ec04aae, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.03263447
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
