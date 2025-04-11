@@ -384,10 +384,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
-    ~@PlayerControls()
-    {
-        UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, PlayerControls.Player.Disable() has not been called.");
-    }
 
     public void Dispose()
     {

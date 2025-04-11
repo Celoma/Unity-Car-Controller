@@ -11,6 +11,7 @@ public class Timerscript : MonoBehaviour
     private float elapsedTime;
     private bool isTimerRunning;
 
+    private bool isFinished = false;
     private Vector3 targetCoordinates = new Vector3(140.2302f, 1f, 83.965f);
 
     void Start()
@@ -28,18 +29,12 @@ private void Awake()
     {
 
 
-        if (_playerControls.Player.Accelerate.ReadValue<float>() != 0 && isTimerRunning == false && elapsedTime == 0f)
+        if (_playerControls.Player.Accelerate.ReadValue<float>() != 0 && isTimerRunning == false && elapsedTime == 0f && !isFinished)
         {
             isTimerRunning = true;
             elapsedTime = 0f;
         }
-        Debug.Log(Vector3.Distance(playerTransform.position, targetCoordinates));
-
-        if (isTimerRunning && Vector3.Distance(playerTransform.position, targetCoordinates) < 2f)
-        {
-            isTimerRunning = false;
-        }
-
+        
         if (isTimerRunning)
         {
             elapsedTime += Time.deltaTime;
@@ -47,6 +42,12 @@ private void Awake()
         }
 
         
+    }
+    public void finish()
+    {
+        Debug.Log("Finish line crossed!");
+        isFinished = true;
+        isTimerRunning = false;
     }
 
     private void UpdateTimerText()
