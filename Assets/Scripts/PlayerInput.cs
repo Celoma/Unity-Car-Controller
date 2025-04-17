@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class PlayerInput : MonoBehaviour
 {
     private PlayerControls _playerControls;
     private CarController _carController;
-    public Timerscript timerscript;
     public float accel;
     public float handBrake;
     public float turn;
+    public UnityEvent onFinish;
 
     public GameObject pauseMenuUI;
     public static bool GameIsPaused = false;
@@ -23,12 +24,16 @@ public class PlayerInput : MonoBehaviour
 
     public static Action<bool> OnPause;
 
+    private bool _hasFinished; // Track if the finish line has been crossed
+
     private void Awake()
     {
         if (pauseMenuUI == null)
         {
             Debug.LogError("Pause menu UI is not assigned in the inspector!");
-        } else {
+        }
+        else
+        {
             pauseMenuUI.SetActive(false);
         }
 
@@ -49,6 +54,7 @@ public class PlayerInput : MonoBehaviour
 
         _startPosition = transform.position;
         _startRotation = transform.rotation;
+        _hasFinished = false;
 
         _playerControls.Player.Reset.performed += _ => Respawn();
         _playerControls.Player.Pause.performed += Pause_performed;
@@ -99,6 +105,12 @@ public class PlayerInput : MonoBehaviour
         accel = _playerControls.Player.Accelerate.ReadValue<float>();
         turn = _playerControls.Player.Turn.ReadValue<float>();
         handBrake = _playerControls.Player.HandBrake.ReadValue<float>();
+        // Check finish line condition and ensure it's only triggered once
+        if (!_hasFinished && Mathf.Abs(transform.position.x - (_startPosition.x - 5)) < 3f && Mathf.Abs(transform.position.z - _startPosition.z) < 20f)
+        {
+            _hasFinished = true; // Set the flag to prevent multiple triggers
+            onFinish.Invoke(); // Trigger the finish event
+        }
     }
 
     private void FixedUpdate()
@@ -112,5 +124,6 @@ public class PlayerInput : MonoBehaviour
         _rigidbody.angularVelocity = Vector3.zero;
         transform.position = _startPosition;
         transform.rotation = _startRotation;
+        _hasFinished = false; // Reset the finish flag when respawning
     }
 }
