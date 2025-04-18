@@ -10,6 +10,8 @@ public class HUD : MonoBehaviour
     [SerializeField] private CarController _carController;
     [SerializeField] private GameObject _controlsUiPanel;
     [SerializeField] private GameObject _pausePanel;
+
+    [SerializeField] private GameObject _endPanel;
     [SerializeField] private Toggle _mphToggle;
     [SerializeField] private Toggle _kphToggle;
     [SerializeField] private GameObject _speedTextPanel;
@@ -20,6 +22,8 @@ public class HUD : MonoBehaviour
         _speedType = _carController._speedType == SpeedType.MPH ? " MPH" : " KPH";
         PlayerInput.OnPause += TogglePause;
         Cursor.lockState = CursorLockMode.Locked;
+        //End panel off
+        _endPanel.SetActive(false);
     }
 
     private void LateUpdate()

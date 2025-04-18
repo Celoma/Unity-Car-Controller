@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
-using System;
+using System.Collections;
 
 public class Timerscript : MonoBehaviour
 {
+
+    public GameObject endScreen; // À assigner dans l’inspecteur
     private PlayerControls _playerControls;
     [SerializeField] private Text timerText;
     [SerializeField] private Transform playerTransform;
@@ -48,6 +49,7 @@ private void Awake()
         Debug.Log("Finish line crossed!");
         isFinished = true;
         isTimerRunning = false;
+        StartCoroutine(ShowEndScreenAfterDelay(3f)); // Appel de la coroutine
     }
 
     private void UpdateTimerText()
@@ -57,4 +59,11 @@ private void Awake()
         int milliseconds = Mathf.FloorToInt((elapsedTime * 1000) % 1000);
         timerText.text = string.Format("{0:D2}:{1:D2}:{2:D3}", minutes, seconds, milliseconds);
     }
+        private IEnumerator ShowEndScreenAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        endScreen.SetActive(true);
+        Debug.Log("End screen displayed!");
+    }
 }
+
